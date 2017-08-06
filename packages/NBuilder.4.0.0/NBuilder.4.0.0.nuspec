@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>NBuilder</id>
+    <version>4.0.0</version>
+    <title>NBuilder</title>
+    <authors>Gareth Down and awesome contributors!</authors>
+    <owners>Gareth Down and awesome contributors!</owners>
+    <licenseUrl>http://www.gnu.org/licenses/lgpl.html</licenseUrl>
+    <projectUrl>http://nbuilder.org/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Through a fluent, extensible interface, NBuilder allows you to rapidly create test data, automatically assigning values to properties and public fields that are one of the built in .NET data types (e.g. ints and strings). NBuilder allows you to override for properties you are interested in using lambda expressions.</description>
+    <summary>Rapidly create test data using a fluent, extensible interface.</summary>
+    <tags>TDD unit-testing unittesting unitesting testing fluent</tags>
+  </metadata>
+</package>

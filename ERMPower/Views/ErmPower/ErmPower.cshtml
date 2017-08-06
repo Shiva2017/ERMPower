@@ -1,0 +1,92 @@
+﻿@model ERMPower.Models.Meter
+ <div class="container img-responsive" >
+    <img src="~/Images/ermlogo.png" />
+</div>
+<div>
+    <hr />
+    <div class="container">
+        <div class="row"><strong> TOU Meter data</strong></div>
+        <div class="row">
+            <table class="table table-striped table-condensed table-hover">
+                <tr class="row">
+                    <td class="col" style="font-weight:bold">MeterPoint Code </td>
+                    <td class="col" style="font-weight:bold">Serial Number </td>
+                    <td class="col" style="font-weight:bold">File Name</td>
+                    <td class="col" style="font-weight:bold">Date/Time </td>
+                    <td class="col" style="font-weight:bold">Energy</td>
+                    <td class="col" style="font-weight:bold">Median</td>
+                    <td class="col" style="font-weight:bold">Rate</td>
+                </tr>
+                @foreach (var tou in Model.TouMeter)
+                {
+                    <tr class="row">
+                        <td>
+                            @tou.MeterPointCode
+                        </td>
+                        <td>
+                            @tou.SerialNumber
+                        </td>
+                        <td>
+                            @tou.FileName
+                        </td>
+                        <td>
+                            @tou.DateTime
+                        </td>
+                        <td>
+                            <strong> @Convert.ToString(tou.Energy)</strong>
+                        </td>
+                        <td>
+                            @tou.Median
+                        </td>
+                        <td>
+                            @tou.Rate
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <br />
+    <div class="container">
+        <div class="row"><strong> LP Meter data</strong></div>
+        <div class="row">
+            <table class="table table-striped table-condensed table-hover">
+                <tr class="row">
+                    <td class="col" style="font-weight:bold">MeterPoint Code </td>
+                    <td class="col" style="font-weight:bold">Serial Number </td>
+                    <td class="col" style="font-weight:bold">File Name</td>
+                    <td class="col" style="font-weight:bold">Date/Time </td>
+                    <td class="col" style="font-weight:bold">Data Value</td>
+                    <td class="col" style="font-weight:bold">Median</td>
+                    <td class="col" style="font-weight:bold">Units</td>
+                </tr>
+                @foreach (var tou in Model.LpMeter)
+                {
+                    <tr class="row">
+                        <td>
+                            @tou.MeterPointCode
+                        </td>
+                        <td>
+                            @tou.SerialNumber
+                        </td>
+                        <td>
+                            @tou.FileName
+                        </td>
+                        <td>
+                            @tou.DateTime
+                        </td>
+                        <td>
+                            <strong> @Convert.ToString(tou.DataValue) </strong>
+                        </td>
+                        <td>
+                            @tou.Median
+                        </td>
+                        <td>
+                            @tou.Units
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
